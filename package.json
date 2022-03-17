@@ -1,0 +1,15 @@
+{
+  "name": "projet-restau",
+  "version": "1.0.0",
+  "description": "Projet AWS - Reservation restaurent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mebhah Khaled",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "twilio": "^3.75.1"
+  }
+}
