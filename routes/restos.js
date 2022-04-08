@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+// AJOUTER UN RESTO
 router.post('/', async (req, res) => {
     const resto = new Resto({
         nom : req.body.nom,
