@@ -1,10 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv/config');
+const bodyParser = require('body-parser');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
 const app = express();
 const PORT = 3000;
+
+// Midleware
+app.use(bodyParser.json());
+
 
 // Import Routes
 const restosRoute = require('./routes/restos');
