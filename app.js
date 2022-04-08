@@ -6,15 +6,16 @@ const res = require('express/lib/response');
 const app = express();
 const PORT = 3000;
 
+// Import Routes
+const restosRoute = require('./routes/restos');
+
+app.use('/restos', restosRoute);
 
 // routes
 app.get('/' , (req, res) =>{
     res.send('home page')
 });
 
-app.get('/restos' , (req, res) =>{
-    res.send('Liste des restaurants')
-});
 
 // connect to DB
 mongoose.connect(
