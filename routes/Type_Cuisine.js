@@ -6,7 +6,7 @@ const Type_Cuisine = require('../models/TypeCuisine');
 
 const router = express.Router();
 
-//Récuprer les restaurants
+//Récuprer les types de cuisine 
 router.get('/', async (req, res) => {
     try{
         const type = await Type_Cuisine.find();
