@@ -40,4 +40,3 @@ const Reservation = mongoose.model(
 	);
 
 	module.exports = {Reservation};
-
