@@ -6,6 +6,7 @@ const Resto = require('../models/Resto');
 
 const router = express.Router();
 
+//Récuprer les restaurants
 router.get('/', async (req, res) => {
     try{
         const restos = await Resto.find();
@@ -15,6 +16,21 @@ router.get('/', async (req, res) => {
         res.json({ message : err });
     }
 });
+
+//////////////////restaurant italien/////////
+router.get('/', async (req,res ) => {
+    try{
+        const restos = await Resto.find();
+        res.json(restos);
+    }
+    catch (err){
+        res.json({ message : err });
+    }
+});
+
+
+
+/////////////////////
 
 // AJOUTER UN RESTO
 router.post('/', async (req, res) => {
