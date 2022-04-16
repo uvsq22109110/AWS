@@ -1,0 +1,43 @@
+html {
+	scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
+}
+
+h2,h3, h4, nav-item , #transition , footer {
+	text-align: center;
+}
+
+/* HEADER  */
+
+header {
+	background-color: #D7A86E;
+	background-size: cover;
+	height: 100vh;
+	border-radius: 0px 0px 20px 20px;
+	margin-bottom: 50px;
+}
+
+h1{
+	font-size: 5em;
+	padding: 200px 0 0 20%;
+	text-shadow: -3px 3px 2px #EEF2FF;
+	animation: titre ease 2s;
+	font-style: oblique;
+	font-family: times;
+}
+
+/* animation, du titre*/
+
+@keyframes titre {  
+
+	/* debut de l'animation  */
+	0% { 
+		opacity: 0;
+		transform: translateX(400px); /*(x,y) de il mmonte de bas en haut */
+	}
+
+	/* fin de l'animation  */
+	100%{
+		opacity: 1;
+		transform: translateX(0px); /*retrouve la place d'origine*/
+	}
+}

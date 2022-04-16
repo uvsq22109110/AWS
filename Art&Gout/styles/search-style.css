@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    background: url("../images/image1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    vertical-align: top; 
+}
+
+.brand-icon{
+    height: 70px;
+    width: 60px;
+    fill: blue;
+}
+
+.container-layout{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.card-body {
+  font-size: 0.1em;
+  color: black;
+  background-image: none;
+}
+

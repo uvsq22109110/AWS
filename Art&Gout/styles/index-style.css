@@ -1,0 +1,233 @@
+html {
+    scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
+}
+
+body{
+    height: 100vh;
+    background: url("../images/image1.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* bouton redirection */
+.nav-item {
+
+    display: block;
+    list-style: none;
+    text-align: center;
+    line-height: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-bottom: 6px;
+    font-size: 20px;
+    font-family: times;
+    font-style: inherit;
+    font-variant-caps: all-petite-caps;
+
+}
+
+/**********$ Barre de Recherche ****************/
+
+/* boutton recherche */
+div .d-grid{
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 18px;
+}
+div .d-grid button {
+    color: black;
+    background-color: #F1DDBF;
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 1px;
+
+}
+/* bord de la barre */
+.container-layout{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    opacity: 0.9;
+}
+
+.card-layout{
+    margin-right: 16%;
+    margin-left: 16%;
+}
+
+/* Quoi Ou */
+.mb-3 {
+    font-size: 20px;
+    font-family: times;
+}
+.mb-3 .form-select{
+    font-size: 15px;
+    font-family: unset;
+    flex-shrink: initial;
+}
+
+/* animation, du titre*/
+
+@keyframes titre {  
+
+    /* debut de l'animation  */
+    0% { 
+        opacity: 0;
+        transform: translateY(90px); /*(x,y) de il mmonte de bas en haut */
+    }
+
+    /* fin de l'animation  */
+    100%{
+        opacity: 1;
+        transform: translateY(0px); /*retrouve la place d'origine*/
+    }
+}
+
+/************************** NAV **********************/
+
+/* Titre Art&Gout */
+
+
+.en-tete h1{
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  'Dancing Script',cursive;
+    font-style: oblique;
+
+}
+
+span{
+    border-radius: 10px;
+    color: gray;
+    background-color: floralwhite;
+    opacity: 0.9;
+    box-shadow: 6px 3px 2px black;
+}
+
+
+/* message glissez  */
+
+.en-tete h3{
+    text-align: center;
+    padding-bottom: 60px;
+    font-size: 25px;
+    color: white; 
+    font-family: times; 
+    font-style: italic; 
+    text-shadow: 1px 3px 2px black;
+    animation: titre ease 3s;
+}
+
+
+
+#premierTrait{
+    height: 1px;
+    width: 80%;
+    margin: -3px auto;
+    background-color: floralwhite;
+    box-shadow: 1px 3px 2px black;
+}
+
+
+/************** SPECIALITÉS **************$*/
+
+#specialites{
+    background-color: #F7F6F2;
+    border-radius: 2px;
+    padding: 25px;
+}
+ .elements{
+    padding: 70px 0;
+ }
+
+.elements img{
+    border-radius: 5%;
+    max-width:25%;
+    margin-bottom: 3%;
+    border-radius: 50%
+    -webkit-transition: all 1s ease; /* Safari et Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* Internet Explorer 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    margin-left: 5%;
+}
+
+.elements img:hover{
+
+-webkit-transform:scale(0.25); /* Safari et Chrome */
+-moz-transform:scale(1.25); /* Firefox */
+-ms-transform:scale(1.25); /* Internet Explorer 9 */
+-o-transform:scale(1.25); /* Opera */
+transform:scale(1.25);
+}
+#specialites h2{
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  'Dancing Script',times;
+    font-style: oblique;
+}
+.elements h3{
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  'Dancing Script',cursive;
+    font-style: oblique;
+}
+.elements p{
+    font-size: 1.2em;
+    display: -webkit-box;
+    -webkit-box-orient : vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding-right: 25px;
+
+}
+
+.elements .btn{
+    color: black;
+    background-color: #F1DDBF;
+    background-size: cover;
+    border-radius: 10px;
+    border-color: white;
+}
+.elements .button {
+
+    text-align: right;
+    margin: 15px 4% 0 0;
+}
+
+.elements .btn:hover {
+
+    background-color: white;
+    color: black;
+    opacity: 0.4;
+}
+
