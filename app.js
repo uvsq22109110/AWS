@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Import Routes
-const restosRoute = require('/Users/lily/Desktop/AWS/routes/restos');
-const reservationRoutes = require('/Users/lily/Desktop/AWS/routes/reservations');
+const restosRoute = require('./routes/restos');
+const reservationRoutes = require('./routes/reservations');
 
 //Middlewire
 app.use('/reservations', reservationRoutes);

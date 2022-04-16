@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ResaID = require('mongoose').Types.ObjectId; // recupere l id de la reservation 
-const {Reservation} = require('/Users/lily/Desktop/AWS/models/Reservation') ;
+const {Reservation} = require('../models/Reservation') ;
 
 //Affciher les reservations 
 router.get('/', (req, res) => {
