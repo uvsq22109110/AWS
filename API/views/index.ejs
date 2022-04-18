@@ -1,0 +1,184 @@
+<%- include('./header.ejs')%>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Ajouter un restautant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ <nav class="en-tete">
+       
+            <ul> 
+               <div
+                    id="imagePrincipale">
+                    <h1><span>  ~ Bienvenue chez Art&Goût ~ </span></h1>
+                    <h3>Glissez pour rechercher des restaurants </h3>
+                </div>
+
+        </nav>
+
+<div id="premierTrait"></div>
+
+    <div class="container container-layout">
+        <div class="card card-layout">
+            <div class="card-body">
+                <form>
+                     <div class="mb-3">
+                        <label for="adresse" class="form-label">Quoi ?</label>
+                         
+                        <select class="form-select" id="searchContent">
+
+                            <option disabled selected>Quel type de cuisine cherchez-vous</option>
+                            <option value="Italienne">Tout</option>
+                          
+                            <option value="Italienne">Italienne</option>
+                            <option value="Japonaise">Japonaise</option>
+                            <option value="Chinoise">Chinoise</option>
+                            <option value="Portugaise">Portugaise</option>
+                            <option value="Turque">Turque</option>
+                            <option value="Indienne">Indienne</option>
+                            <option value="Mexicainne">Mexicainne</option>
+                            <option value="Francaise">Francaise</option>
+                            <option value="Libanaise">Libanaise</option>
+                            <option value="Algerienne">Algerienne</option>
+                             <option value="Thai">Thai</option>
+                            <option value="Fruit de mer Poisson">Fruit de mer Poisson</option>
+                            <option value="Vegan">Vegan</option>
+                            <option value="Bresilienne">Bresilienne</option>
+                            <option value="Africaine">Africaine</option>
+                            <option value="Pakistannaise">Pakistannaise</option>
+                            <option value="Afghan">Afghan</option>
+                            <option value="Gastronomique">Gastronomique</option>
+                            <option value="Marocaine">Marocaine</option>
+                            <option value="Tunisenne">Tunisenne</option>
+                          </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="adresse" class="form-label">Où ?</label>
+                         
+                        <select class="form-select" id="searchContent">
+
+                            <option disabled selected>Sélectionnez une ville</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Lyon">Lyon</option>
+                            <option value="Marseille">Marseille</option>
+                            <option value="Versailles">Versailles</option>
+                            <option value="Boulogne-Billancourt">Boulogne-Billancourt</option>
+                            <option value="Cannes">Cannes</option>
+                            <option value="Nice">Nice</option>
+                            <option value="Toulouse">Toulouse</option>
+                            <option value="Montreuil">Montreuil</option>
+                            <option value="Beausoleil">Beausoleil</option>
+                             <option value="Clichy">Clichy</option>
+                            <option value="Bagnolet">Bagnolet</option>
+                            <option value="Aix en Provence">Aix en Provence</option>
+                            <option value="Rouen">Rouen</option>
+                          </select>
+                    </div>
+                    <div class="d-grid">
+                        <button >RECHERCHE</button>
+                     
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" id="specialites">
+                
+                <h2>Tant de saveurs à découvrir...</h2>
+
+                <div class="container">
+                    <div class="row elements">
+                        <div class="col-sm-12">
+                            <img src="img/turque.jpg" alt="restautant turque">
+                            <img src="img/turc1.jpg" alt="restautant turque">
+                            <img src="img/turc2.jpg" alt="restautant turque">
+                        </div>
+                        <div class="col-sm-12">
+                            <h3>Turque</h3>
+                            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="button">
+                                <button class="btn btn-success">Découvrir</button>
+                            </div>
+                        </div>
+                    </div>
+<div id="premierTrait"></div>
+                    <div class="container">
+                    <div class="row elements">
+                        <div class="col-sm-12">
+                            <img src="img/orientaux.jpg" alt="restautant oriental">
+                            <img src="img/orientaux2.jpg" alt="restautant oriental">
+                            <img src="img/oriental1.jpg" alt="restautant oriental">
+                        </div>
+                        <div class="col-sm-12">
+                            <h3>Oriental</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                             <div class="button">
+                                <button class="btn btn-success">Découvrir</button>
+                            </div>
+                        </div>
+                    </div>
+<div id="premierTrait"></div>
+                    <div class="container">
+                    <div class="row elements">
+                        <div class="col-lg-12">
+                            <img src="img/asian.jpg" alt="restautant asiatique">
+                            <img src="img/asian1.jpg" alt="restautant asiatique">
+                            <img src="img/asian2.jpg" alt="restautant asiatique">
+                        </div>
+                        <div class="col-sm-12">
+                            <h3>Asiatique</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="button">
+                                <button class="btn btn-success">Découvrir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</main>
+    
+
+</body>
+
+</html>
