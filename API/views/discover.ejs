@@ -3,113 +3,29 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            
-            <a class="navbar-brand" href="index.html"> <img src="images/utensils.svg" alt="Art&Gout" class="brand-icon">Art&Gout</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Contacts.html">Contacts</a>
+                        <a class="nav-link active" aria-current="page" href="contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container container-layout row">
-       <div class="col-4">
-            <div class="card col-12">
-                <div class="card-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="images/lune_de_bejaia1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/lune_de_bejaia2.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/lune_de_bejaia.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                      <h3>La Lune de Bejaïa</h3>
-                      <button class="btn btn-success">Réserver
-                      </button>
-                </div>
-            </div>
+    <div class="row center">
+      <!--boucler sur la liste des restos-->
+      <% for (var i = 0; i < data.length; i++) { %>
+      <div class="card" style="width: 22rem; margin: 1em;">
+        <img class="card-img-top" src="img/turque.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><%= data[i].cuisine %></p>
+          <h5 class="card-title"><%= data[i].nom %></h5>
+          <p class="card-text"><%= data[i].adresse %></p>
+          <p class="card-text">Contact: <%= data[i].telephone %></p>
+          <a href="#" class="btn btn-primary">Reservez</a>
         </div>
-        <div class="col-4">
-            <div class="card col-12">
-                <div class="card-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="images/image5.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/image2.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/image3.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                      <h3>Tour d'Argent</h3>
-                      <button class="btn btn-success">Réserver
-                      </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="card col-12">
-                <div class="card-body">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="images/popolare.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/popolare2.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="images/popolare3.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                      <h3>Popolare</h3>
-                      <button class="btn btn-success">Réserver
-                      </button>
-                </div>
-            </div>
-        </div>
+      </div>
+      <% } %>
     </div>
 </body>
 

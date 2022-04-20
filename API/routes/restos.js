@@ -12,30 +12,20 @@ router.post('/', async (req, res) => {
         console.log(req.body);
         if(req.body.cuisine == 'Tout'){
             const restos = await Resto.find({ 'ville' : req.body.ville});
-            res.json(restos);
+            res.render("discover", {data : restos});
         } else{
             const restos = await Resto.find({ 'cuisine' : req.body.cuisine, 'ville' : req.body.ville});
-            res.json(restos);
+            res.render("discover", {data : restos});
         }
         
     }
     catch (err){
         res.json({ message : err });
     }
-
-    
-    //res.render("discover");
 });
 
 router.get('/', (req, res) => {
     
-    // try{
-    //     const restos = await Resto.find();
-    //     res.json(restos);
-    // }
-    // catch (err){
-    //     res.json({ message : err });
-    // }
     res.render('index');   
 });
 
