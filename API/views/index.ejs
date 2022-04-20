@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Ajouter un restautant</a>
+                        <a class="nav-link" aria-current="page" href="#">Recommander un restautant</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="contact">Contacts</a>
@@ -32,19 +32,15 @@
         </nav>
 
 <div id="premierTrait"></div>
-
     <div class="container container-layout">
         <div class="card card-layout">
             <div class="card-body">
-                <form>
-                     <div class="mb-3">
+                <form action="/restos" method="POST">
+                     <div class="form-group mb-3">
                         <label for="adresse" class="form-label">Quoi ?</label>
-                         
-                        <select class="form-select" id="searchContent">
-
+                        <select name ="cuisine" class="form-select" id="searchContent1">
                             <option disabled selected>Quel type de cuisine cherchez-vous</option>
-                            <option value="Italienne">Tout</option>
-                          
+                            <option value="Tout">Tout</option>                          
                             <option value="Italienne">Italienne</option>
                             <option value="Japonaise">Japonaise</option>
                             <option value="Chinoise">Chinoise</option>
@@ -55,7 +51,7 @@
                             <option value="Francaise">Francaise</option>
                             <option value="Libanaise">Libanaise</option>
                             <option value="Algerienne">Algerienne</option>
-                             <option value="Thai">Thai</option>
+                            <option value="Thai">Thai</option>
                             <option value="Fruit de mer Poisson">Fruit de mer Poisson</option>
                             <option value="Vegan">Vegan</option>
                             <option value="Bresilienne">Bresilienne</option>
@@ -67,11 +63,9 @@
                             <option value="Tunisenne">Tunisenne</option>
                           </select>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label for="adresse" class="form-label">Où ?</label>
-                         
-                        <select class="form-select" id="searchContent">
-
+                        <select name="ville" class="form-select" id="searchContent2">
                             <option disabled selected>Sélectionnez une ville</option>
                             <option value="Paris">Paris</option>
                             <option value="Lyon">Lyon</option>
@@ -83,15 +77,14 @@
                             <option value="Toulouse">Toulouse</option>
                             <option value="Montreuil">Montreuil</option>
                             <option value="Beausoleil">Beausoleil</option>
-                             <option value="Clichy">Clichy</option>
+                            <option value="Clichy">Clichy</option>
                             <option value="Bagnolet">Bagnolet</option>
                             <option value="Aix en Provence">Aix en Provence</option>
                             <option value="Rouen">Rouen</option>
                           </select>
                     </div>
                     <div class="d-grid">
-                        <button >RECHERCHE</button>
-                     
+                        <button type="submit">RECHERCHE</button>
                     </div>
                 </form>
             </div>

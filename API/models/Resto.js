@@ -16,8 +16,18 @@ const RestoSchema = mongoose.Schema({
         required : true
     },
 
+    ville : {
+        type: String,
+        required : true
+    },
+
     places : {
         type: Number,
+        required : true
+    },
+
+    telephone : {
+        type: String,
         required : true
     }
 });

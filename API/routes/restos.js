@@ -6,36 +6,60 @@ const Resto = require('../models/Resto');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.post('/', async (req, res) => {
     
     try{
-        const restos = await Resto.find();
-        res.json(restos);
+        console.log(req.body);
+        if(req.body.cuisine == 'Tout'){
+            const restos = await Resto.find({ 'ville' : req.body.ville});
+            res.json(restos);
+        } else{
+            const restos = await Resto.find({ 'cuisine' : req.body.cuisine, 'ville' : req.body.ville});
+            res.json(restos);
+        }
+        
     }
     catch (err){
         res.json({ message : err });
     }
+
+    
+    //res.render("discover");
+});
+
+router.get('/', (req, res) => {
+    
+    // try{
+    //     const restos = await Resto.find();
+    //     res.json(restos);
+    // }
+    // catch (err){
+    //     res.json({ message : err });
+    // }
+    res.render('index');   
 });
 
 
-// AJOUTER UN RESTO
-router.post('/', async (req, res) => {
-    const resto = new Resto({
-        Nom_restaurant : req.body.Nom_restaurant,
-        type_cuisine : req.body.type_cuisine,
-        Adresse : req.body.Adresse,
-        Ville : req.body.Ville,
-        Num_tel : req.body.Num_tel
-    });
 
-    try{
-        const savedResto = await resto.save();
-        res.json(savedResto);
-    }
+// // AJOUTER UN RESTO
+// router.post('/', async (req, res) => {
+//     const resto = new Resto({
+//         nom : req.body.nom,
+//         cuisine : req.body.cuisine,
+//         adresse : req.body.adresse,
+//         ville : req.body.ville,
+//         places : req.body.places,
+//         telephone : req.body.telephone
+//     });
 
-    catch (err){
-        res.json({ message : err });
-    }
-});
+//     try{
+//         const savedResto = await resto.save();
+//         res.json(savedResto);
+//     }
+
+//     catch (err){
+//         res.json({ message : err });
+//     }
+// });
 
 module.exports = router;

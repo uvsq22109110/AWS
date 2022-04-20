@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv/config');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
@@ -9,7 +8,8 @@ const app = express();
 const PORT = 3000;
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(cors());
 
 // Static files
