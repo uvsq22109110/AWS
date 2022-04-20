@@ -39,17 +39,18 @@ header {
 	background-size: cover;
 	height: 80vh;
 	border-radius: 0px 0px 20px 20px;
-	margin-bottom: 10%;
+	display: table-row;
 
 }
 
 h1{
 	font-size: 5em;
-	padding: 200px 0 0 10%;
+	padding: 20px 0 0 10%;
 	text-shadow: -3px 3px 2px #EEF2FF;
 	animation: titre ease 2s;
 	font-style: oblique;
 	font-family: times;
+
 
 }
 
@@ -111,22 +112,85 @@ p{
 	animation: texte ease 1s;
 }
 
-h2 {
-}
 form h2{
 	font-family: times;
-	background-color: white;
-	margin-right: 25%;
-	
+	background-color: floralwhite;
+	border-radius: 30px;
+	margin-bottom: 6%;
 }
 
 
 /* formulaire */
 
 form {
-	margin-left: 40%;
+	margin-left: 35%;
+	margin-right: 10%;
+	font-family: times;
+	font-weight: bold;
+	background-color: #A2B38B;
+	padding: 50px;
+	border-radius: 10px;
+
 }
 
+form .corps-du-formulaire{
+
+	display: flex;
+
+}
+form .corps-du-formulaire .boites{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+form .corps-du-formulaire .Partiegauche .boites input{
+
+	margin-top: 5%;
+	padding: 7px 5px 7px 30px;
+	border: 1px solid green;
+	outline-color: black;
+	border-radius: 10px;
+}
+
+form .corps-du-formulaire .Partiegauche .boites i{
+
+	position: absolute;
+    padding-top: 50px;
+    padding-left: 10px;
+    color: green;
+}
+
+form .corps-du-formulaire .Partiedroite{
+	margin-left: 40px;
+}
+
+form .corps-du-formulaire .Partiedroite .boites input{
+
+	margin-top: 5%;
+	padding: 7px 5px 7px 5px;
+	border: 1px solid green;
+	outline-color: black;
+	border-radius: 10px;
+}
+
+
+form .corps-du-formulaire .Partiedroite .boites i{
+
+	position: absolute;
+    padding-top: 50px;
+    padding-left: 16px;
+    color: green;
+}
+
+form .fin-formualire button{ 
+
+	margin-top: 5%;
+	border-radius: 25%;
+	border-style: !important;
+	background-color: floralwhite;
+
+}
 
 
 
