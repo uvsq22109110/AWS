@@ -42,7 +42,7 @@ app.get('/contact' , (req, res) =>{
 
 // connect to DB
 mongoose.connect(
-    process.env.DB_CONNECTION,
+    "mongodb+srv://aws-user:awsuser123@cluster0.q0kqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     () => console.log('connected to DataBase!'));
 
 // server listening
