@@ -45,18 +45,11 @@ router.post('/',  (req, res) => {
 	});
 
 	   newRecord.save((err, resa) => {
-		if (!err) 
-			{const result = Reservation.find()
-			  .populate("restaurant_id", ).exec((err, details_restaurants) => {
-			    res.send(details_restaurants);
-			   	})
-			      		res.render('fin_de_reservations',{resa: result});}
-				
+		if (!err) res.render("fin_de_reservations", resa);
 		else
-		  console.log("Erreur de creation de new data : " + err);
+		  console.log("Erreur de ceration de new data : " + err);
 
 	})
-
 	
 
 });
