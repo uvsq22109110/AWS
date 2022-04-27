@@ -27,14 +27,15 @@ var ville = "Paris";
 //     }
 // });
 function pagination(req, res, next) {
-    var perPage = 9
+    var perPage = 6
     var page = req.params.page || 1
     console.log(page);
     console.log(cuisine);
     console.log(ville);
     if(req.body.cuisine == 'Tout'){
         Resto
-        .find({'ville' : ville})
+        .find({ ville: ville})
+        .sort( '-nom' )
         .skip((perPage * page) - perPage)
         .limit(perPage)
         .exec(function(err, restos) {
@@ -50,7 +51,8 @@ function pagination(req, res, next) {
     }
     else{
         Resto
-        .find({'cuisine':cuisine ,'ville' : ville})
+        .find({ville : ville, cuisine: cuisine})
+        .sort( '-nom' )
         .skip((perPage * page) - perPage)
         .limit(perPage)
         .exec(function(err, restos) {
@@ -73,9 +75,9 @@ router.post('/', function(req, res, next) {
     pagination(req, res, next)
 });
 
-// router.post('/:page', function(req, res, next) {
-//     pagination(req, res, next)
-// });
+router.post('/:page', function(req, res, next) {
+    pagination(req, res, next)
+});
 
 router.get('/:page', function(req, res, next) {
     pagination(req, res, next)
