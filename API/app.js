@@ -43,25 +43,27 @@ app.get('/reservation' , (req, res) =>{
      res.render('add-resto')
  })
 
- app.post('/add-resto', function(req, res, next) {
+ app.post('/add-resto', async function(req, res, next) {
+     console.log( req.body.telephone)
      var resto = new Resto({
                  nom : req.body.nom,
                  cuisine : req.body.cuisine,
                  adresse : req.body.adresse,
                  ville : req.body.ville,
-                 places : req.body.places,
+                 places : 50,
                  telephone : req.body.telephone
              });
 
              try{
-                 var savedResto = resto.save();
-                 res.json(savedResto);
+                 var savedResto = await resto.save();
+                 res.render('index');
              }
 
              catch (err){
                  res.json({ message : err });
+                 console.log('Not working');
              }
- })
+ });
 
  // connect to DB
  mongoose.connect(
