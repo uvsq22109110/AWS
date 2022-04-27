@@ -4,8 +4,6 @@ require('dotenv/config');
 const cors = require('cors');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
-const Resto = require('./models/Resto');
-
 const app = express();
 const PORT = 3000;
 
@@ -42,34 +40,18 @@ app.get('/contact' , (req, res) =>{
     res.render('contact');
 });
 
-app.get('/add-resto', function(req, res, next) {
-    res.render('add-resto')
-})
+app.get('/ajout_resto' , (req, res) =>{
+    res.render('ajout_resto');
+});
 
-app.post('/add-resto', function(req, res, next) {
-    var resto = new Resto({
-                nom : req.body.nom,
-                cuisine : req.body.cuisine,
-                adresse : req.body.adresse,
-                ville : req.body.ville,
-                places : req.body.places,
-                telephone : req.body.telephone
-            });
-        
-            try{
-                var savedResto = resto.save();
-                res.json(savedResto);
-            }
-        
-            catch (err){
-                res.json({ message : err });
-            }
-})
+app.get('/reservation' , (req, res) =>{
+    res.render('reservation');
+});
 
 // connect to DB
 mongoose.connect(
-    "mongodb+srv://aws-user:awsuser123@cluster0.q0kqk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    process.env.DB_CONNECTION,
     () => console.log('connected to DataBase!'));
 
 // server listening
-app.listen(process.env.PORT || PORT, () => console.log(`App listening on Port ${PORT}`)) ;
+app.listen(PORT, () => console.log(`App listening on Port ${PORT}`)) ;
