@@ -1,0 +1,59 @@
+body{
+    height: 100vh;
+    background: url("../img/image1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    vertical-align: top; 
+}
+
+/*contact*/
+footer {
+
+  background-color: #4B6587;
+  color: floralwhite;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  opacity: 0.98;
+
+}
+
+
+form {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+input, textarea, button {
+  border: none;
+  width: 55%;
+  padding: 15px 10px;
+  margin: 1px 0;
+  font-size: 1.1em;
+  font-family: cursive;
+  border-radius: 6px;
+}
+textarea {
+  height: 120px;
+}
+button {
+  font-size: 1.5em;
+  background-color: wheat;
+  
+
+}
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+#copyrightEtIcons {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 10%;
+}
+#copyright {
+  width: 50%;
+  text-align: left;
+  color: black;
+}

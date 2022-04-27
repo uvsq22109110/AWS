@@ -86,9 +86,9 @@ div .d-grid button {
     flex-shrink: initial;
 }
 
-/* animation, du titre*/
+/* animation, du texte*/
 
-@keyframes titre {  
+@keyframes texte {  
 
     /* debut de l'animation  */
     0% { 
@@ -105,6 +105,14 @@ div .d-grid button {
 
 /************************** NAV **********************/
 
+/*Logo*/
+div .Logo{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: Cambria;
+    font-style: oblique;
+}
 /* Titre Art&Gout */
 
 
@@ -115,7 +123,7 @@ div .d-grid button {
     margin-right: 25%;
     margin-left: 25%;
     font-size: 40px;
-    font-family:  'Dancing Script',cursive;
+    font-family:  Baskerville;
     font-style: oblique;
 
 }
@@ -139,7 +147,7 @@ span{
     font-family: times; 
     font-style: italic; 
     text-shadow: 1px 3px 2px black;
-    animation: titre ease 3s;
+    animation: texte ease 3s;
 }
 
 
@@ -159,6 +167,7 @@ span{
     background-color: #F7F6F2;
     border-radius: 2px;
     padding: 25px;
+    margin-bottom: 4%;
 }
  .elements{
     padding: 70px 0;
@@ -179,12 +188,13 @@ span{
 
 .elements img:hover{
 
--webkit-transform:scale(0.25); /* Safari et Chrome */
+-webkit-transform:scale(1.25); /* Safari et Chrome */
 -moz-transform:scale(1.25); /* Firefox */
 -ms-transform:scale(1.25); /* Internet Explorer 9 */
 -o-transform:scale(1.25); /* Opera */
 transform:scale(1.25);
 }
+
 #specialites h2{
     text-align: center;
     margin-right: 25%;
@@ -217,17 +227,54 @@ transform:scale(1.25);
     background-size: cover;
     border-radius: 10px;
     border-color: white;
+    transition: all 0.5s ease;
 }
 .elements .button {
 
     text-align: right;
     margin: 15px 4% 0 0;
+    border-color: black;
+    
 }
 
 .elements .btn:hover {
 
     background-color: white;
+    border-color: black;
     color: black;
     opacity: 0.4;
 }
 
+/* Partie ajouter restaurant  */
+
+#specialites .container1 h3 {
+
+    text-align: center;
+    margin-bottom: 6%;
+    margin-top: 15%;
+    font-size: 35px;
+    font-family:  'Dancing Script',times;
+    font-style: oblique;
+}
+
+#specialites .button1 {
+    text-align: center;
+    margin: 15px 0 20% 0;
+    border-color: black;
+}
+
+#specialites .button1 .btn {
+    color: black;
+    background-color: #F1DDBF;
+    background-size: cover;
+    border-radius: 10px;
+    border-color: white;
+    transition: all 0.3s ease;
+}
+#specialites .button1 .btn:hover { 
+
+    background-color: white;
+    border-color: black;
+    color: black;
+    opacity: 0.4;
+}
