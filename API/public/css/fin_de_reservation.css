@@ -1,0 +1,69 @@
+html {
+	scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
+}
+
+
+
+h2,h3, h4, nav-item , #transition , footer {
+	text-align: center;
+}
+
+div .Logo{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+    font-family: Cambria;
+    font-style: oblique;
+}
+/* bouton redirection */
+.nav-item {
+
+    display: block;
+    list-style: none;
+    text-align: center;
+    line-height: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-bottom: 6px;
+    font-size: 20px;
+    font-family: times;
+    font-style: inherit;
+    font-variant-caps: all-petite-caps;
+
+}
+
+/* HEADER  */
+
+header {
+	background-color: #E4D1B9;
+	background-size: cover;
+	height: 80vh;
+
+}
+
+h1{
+
+	font-size: 1em;
+	padding: 20px 0 0 10%;
+	text-shadow: -3px 3px 2px #EEF2FF;
+	font-style: oblique;
+	font-family: times;
+
+
+}
+
+
+p{
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 16px;
+	font-family: times;
+	background-color: white;
+	border-radius: 10px;
+	animation: texte ease 1s;
+}
+
+
+
+
+
