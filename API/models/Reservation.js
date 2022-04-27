@@ -32,9 +32,14 @@ const Reservation = mongoose.model(
 		date: {
 			type: Date,
 			required : true
-		}
+		},
+
+		// restaurant_id : {
+		//     type: mongoose.Schema.Types.ObjectId,
+		//     ref: 'Restos', 
+  // 		}
 	
-	}, 
+	},
 	"reservations"
 
 	);
