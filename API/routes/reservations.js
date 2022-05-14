@@ -5,21 +5,23 @@ const {Reservation} = require('../models/Reservation') ;
 const resto = require('../models/Resto');
 
 //Affciher les reservations 
-// router.get('/', (req, res) => {
+// router.get('/details',async (req, res) => {
 
-// 	Reservation.find((err, resa) => {
-// 		if(!err) 
-// 			Reservation.find()
-//       		.populate("restaurant_id", ).exec((err, details_restaurants) => {
-//       		res.send(details_restaurants);
-//    	 })
+// 	// Reservation.find((err, resa) => {
+// 	// 	if(!err) 
+// 	// 		Reservation.find()
+//  //      		.populate("Nom_client", ).exec((err, details_restaurants) => {
+//  //      		res.render("fin_de_reservations",
+//  //                    details_restaurants);
+//  //   	 })
        
-// 		else
-// 			console.log("Erreur de recuperation de data") + err;
-// 	})
+// 	// 	else
+// 	// 		console.log("Erreur de recuperation de data") + err;
+// 	// })
 
-// 	res.render('reservation'); 
-		
+// 	// res.render('reservation'); 
+
+	
 // });
 
 //Ajouter Une reservation
@@ -39,13 +41,24 @@ router.post('/',  (req, res) => {
 	
 		Nombre_de_personnes : req.body.Nombre_de_personnes,
 
-		date: req.body.date,
-
+		date: req.body.date
+ 	
 		// restaurant_id: req.params.id
-	});
+	}
+	);
+
+
+	Reservation.date instanceof Date;
 
 	   newRecord.save((err, resa) => {
-		if (!err) res.render("fin_de_reservations", resa);
+		if (!err) {
+			
+			res.render("fin_de_reservations", {nom : req.body.Nom_client, prenom : req.body.Prenom_client, 
+			Telephone : req.body.Num_tel_client, Mail : req.body.Mail_client , 
+			Nbr_Personnes : req.body.Nombre_de_personnes , Date : req.body.date}
+			);
+
+		}
 		else
 		  console.log("Erreur de ceration de new data : " + err);
 

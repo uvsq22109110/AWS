@@ -1,0 +1,64 @@
+<%- include('./header2.ejs')%>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index">
+                    <span>Réservation</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="index">Acceuil</a>
+                </li>
+                <li>
+                    <a href="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="reservation-container">
+        <img src="img/reservation.jpeg">
+        
+        <form class="reservation-form" action="/reservations" method="POST">
+            <div class="form-row header-row">
+                <span class="reservation-form-header">Effectuez votre reservation</span>
+            </div>
+            <div class="form-row">
+                <input id="Nom_client" type="text" name="Nom_client" placeholder="Nom*">
+                  
+                <input id="Prenom_client" type="text" name="Prenom_client" placeholder="Prenom*">
+            </div>
+
+            <div class="form-row">
+                <input id="Num_tel_client" type="text" name="Num_tel_client" placeholder="Tel*">
+                <input id="email" type="text" name="Mail_client" placeholder="Email*">
+            </div>
+
+            <div class="form-row">
+                <input id="Nombre_de_personnes" type="text" name="Nombre_de_personnes" placeholder="Nombre de personnes*">
+                <input id="date" type="date" name="date" placeholder="DD.MM.YYYYY*">
+                
+            </div>
+            <div id="messages">
+                <div class="success">
+                    Vous avez une reservation <span class="reservation-time"></span> en <span
+                        class="reservation-date"></span> .
+                </div>
+            </div>
+            <div class="form-row submit-button">
+                <input type="submit" value="Réserver">
+            </div>
+
+        </form>
+    </div>
+    <footer>
+        <div id="contact" class="footer-background">
+            <div class="col">
+                <div class="restaurant-name">
+                    <p>Art&Gout</p>
+                    
+                </div>
+            </div>
+</body>
+</html>
