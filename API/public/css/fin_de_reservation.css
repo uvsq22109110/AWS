@@ -55,7 +55,7 @@ div .Logo{
 /* HEADER  */
 
 
-p{
+.recap p{
 	margin-left: 10%;
 	margin-right: 10%;
 	font-size: 18px;
@@ -112,20 +112,24 @@ form {
 
 }
 
-
-/* the header form form */
 header {
 
     margin: 2% auto 10% auto;
     text-align: center;
 }
-/* Login title form form */
+
 header h2 {
     font-size: 250%;
     font-family: 'Playfair Display', serif;
     color: #3e403f;
 }
-/*  A welcome message or an explanation of the login form */
+
+header h1 {
+    font-size: 100%;
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
 header p {letter-spacing: 0.05em;}
 
 
@@ -146,7 +150,6 @@ header .fin-formualire a{
   	padding-top: 10px;
     cursor: pointer;
     text-align: center;
-    text-decoration: underline;
     transition: all 0.4s linear;
   
     letter-spacing: 0.05em;
