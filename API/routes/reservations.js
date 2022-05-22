@@ -1,28 +1,42 @@
 const express = require('express');
 const router = express.Router();
 const ResaID = require('mongoose').Types.ObjectId; // recupere l id de la reservation 
-const {Reservation} = require('../models/Reservation') ;
+const Reservation = require('../models/Reservation') ;
 const resto = require('../models/Resto');
+const RestoID = require('mongoose').Types.ObjectId; 
 
 //Affciher les reservations 
 // router.get('/details',async (req, res) => {
 
-// 	// Reservation.find((err, resa) => {
-// 	// 	if(!err) 
-// 	// 		Reservation.find()
-//  //      		.populate("Nom_client", ).exec((err, details_restaurants) => {
-//  //      		res.render("fin_de_reservations",
-//  //                    details_restaurants);
-//  //   	 })
+// 	Reservation.find((err, resa) => {
+// 		if(!err) 
+// 			Reservation.find({Nom_client: 'Yao'})
+//       		.populate({path:'restaurant_id' , select: ['nom']}).exec((err, details_restaurants) => {
+//       		// res.render("fin_de_reservations",
+//         //             details_restaurants);
+//         console.log(details_restaurants);
+//    	 })
        
-// 	// 	else
-// 	// 		console.log("Erreur de recuperation de data") + err;
-// 	// })
+// 		else
+// 			console.log("Erreur de recuperation de data") + err;
+// 	})
 
 // 	// res.render('reservation'); 
 
 	
 // });
+
+router.get('/', (req, res) => {
+
+    if (!RestoID.isValid(req.query.id))
+        return res.status(400).send("ID INCONNU : " + req.query.id);      
+       	   
+   res.render('reservation',{data: req.query.id, nom_resto: req.query.nom});
+
+   
+	
+});
+
 
 //Ajouter Une reservation
 router.post('/',  (req, res) => {
@@ -41,31 +55,35 @@ router.post('/',  (req, res) => {
 	
 		Nombre_de_personnes : req.body.Nombre_de_personnes,
 
-		date: req.body.date
- 	
-		// restaurant_id: req.params.id
+		date: req.body.date,
+ 		
+ 		restaurant_id: require('mongoose').mongoose.Types.ObjectId(req.query.id)
+		
 	}
-	);
 
 
-	Reservation.date instanceof Date;
+);
 
-	   newRecord.save((err, resa) => {
+	  newRecord.save((err, resa) => {
 		if (!err) {
+
 			
+
 			res.render("fin_de_reservations", {nom : req.body.Nom_client, prenom : req.body.Prenom_client, 
 			Telephone : req.body.Num_tel_client, Mail : req.body.Mail_client , 
-			Nbr_Personnes : req.body.Nombre_de_personnes , Date : req.body.date}
+			Nbr_Personnes : req.body.Nombre_de_personnes , Date : req.body.date, Restaurant : req.query.nom }
 			);
+
 
 		}
 		else
-		  console.log("Erreur de ceration de new data : " + err);
+		  console.log("Erreur de creation de new data : " + err);
 
 	})
 	
 
 });
+
 
 
 //Modifier une reservation 
@@ -108,20 +126,20 @@ router.post('/',  (req, res) => {
 
 //Supprimer ( Annuler ) reservation 
 
-router.delete("/:id", (req, res) =>  {
+// router.delete("/t/:id", (req, res) =>  {
 
-	if (!ResaID.isValid(req.params.id))
-		return res.status(400).send("ID INCONNU : " + req.params.id);
+// 	if (!ResaID.isValid(req.params.id))
+// 		return res.status(400).send("ID INCONNU : " + req.params.id);
 
-	Reservation.findByIdAndRemove(
-		req.params.id,
-		(err, resa) => {
-			if(!err) res.send(resa);
+// 	Reservation.findByIdAndRemove(
+// 		req.params.id,
+// 		(err, resa) => {
+// 			if(!err) res.send(resa);
 
-			else
-				console.log("Erreur de supression : " + err);
-		})
+// 			else
+// 				console.log("Erreur de supression : " + err);
+// 		})
 
-});	
+// });	
 
 module.exports = router;
