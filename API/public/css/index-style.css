@@ -18,8 +18,8 @@ li {
 }
 
 
-h2{
-    text-transform: uppercase;
+main h2{
+   
     text-align: center;
     padding-top: 30px;
     font-size: 2em;
@@ -127,7 +127,7 @@ div .Logo{
     margin-right: 25%;
     margin-left: 25%;
     font-size: 40px;
-    font-family:  Baskerville;
+    font-family:  California Signature Duo;
     font-style: oblique;
 
 }
@@ -240,6 +240,7 @@ transform:scale(1.25);
     text-align: right;
     margin: 15px 4% 0 0;
     border-color: black;
+    
     
 }
 
