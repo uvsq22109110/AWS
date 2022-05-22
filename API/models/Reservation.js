@@ -1,47 +1,40 @@
 const mongoose = require("mongoose");
 
-const Reservation = mongoose.model(
-
-	"myFirstDatabase",
-	{
-		Nom_client: {
+const ReservationScheme = mongoose.Schema({
+   Nom_client: {
 			type: String,
 			required: true
 		},
 
-		Prenom_client: {
+	Prenom_client: {
 			type: String,
 			required: true
 		},
 		
-		Num_tel_client: {
+	Num_tel_client: {
 			type: String,
 			required: true
 		},
 
-		Mail_client: {
+	Mail_client: {
 			type: String,
 			required: true
 		},
 	
-		Nombre_de_personnes : {
+	Nombre_de_personnes : {
 			type: Number,
         	required : true
 		},
 
-		date: {
-			type: Date,
+	date: {
+			type: String,
 			required : true
 		},
 
-		// restaurant_id : {
-		//     type: mongoose.Schema.Types.ObjectId,
-		//     ref: 'Restos', 
-  // 		}
-	
-	},
-	"reservations"
+	restaurant_id : {
+		    type: mongoose.Schema.Types.ObjectId,
+		    ref: 'Restos', 
+  		}
+});
 
-	);
-
-	module.exports = {Reservation};
+module.exports = mongoose.model('Reservations', ReservationScheme);
