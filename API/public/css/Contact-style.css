@@ -19,7 +19,7 @@ html {
 
 footer p{
 
-  background-color: #FDF6EC;
+  background-color: #EEEEEE;
   background-size: cover;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -61,12 +61,16 @@ footer p{
 
 /*Logo*/
 div .Logo{
+
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color: black;
     font-family: Cambria;
     font-style: oblique;
+
 }
+
+
 /* Titre Art&Gout */
 
 
@@ -83,8 +87,15 @@ div .Logo{
 }
 
 header {
-  background-color: #E4D1B9;
-  background-size: cover;
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+background-image: linear-gradient(to top, #F3E9DD 0%, #DAB88B 100%);
+background-attachment: fixed;
+  background-repeat: no-repeat;
+
+    font-family: 'Vibur', cursive;
+/*   the main font */
+    font-family: 'Abel', sans-serif;  
+opacity: .95;
 }
 .container {
   position: relative;
@@ -110,7 +121,7 @@ header {
 }
 
 .contact-form {
-  background-color: #A2B38B;
+  background-color: #506D84;
 
 }
 
@@ -121,7 +132,7 @@ header {
 
 .circle.one {
 
-  background-color: #F3E9DD;
+  background-color: #EEEEEE;
   opacity: 60%;
   width: 130px;
   height: 130px;
@@ -131,7 +142,7 @@ header {
 
 .circle.two {
 
-  background-color: #F3E9DD;
+  background-color: #EEEEEE;
   opacity: 60%;
   width: 80px;
   height: 80px;
@@ -140,7 +151,7 @@ header {
 }
 
 .circle.three {
-  background-color: #F3E9DD;
+  background-color: #EEEEEE;
   opacity: 60%;
   width: 80px;
   height: 80px;
@@ -150,7 +161,7 @@ header {
 
 .circle.four {
 
-  background-color: #F3E9DD;
+  background-color: #EEEEEE;
   opacity: 60%;
   width: 80px;
   height: 80px;
