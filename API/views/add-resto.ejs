@@ -18,8 +18,8 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            
-           <a class="Logo"aria-current="page" href="index">Art&Goût</a>
+            <img src="img/Logo.svg" alt="Logo" height="50">
+           <a class="Logo"aria-current="page" href="/">Art&Goût</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index">Acceuil</a>
+                        <a class="nav-link" aria-current="page" href="/">Acceuil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="contact">Contacts</a>
@@ -45,13 +45,15 @@
 
 	<div id="premierTrait"></div>
 
+		<div>
 		<p>
 								 Rendez votre restaurant visible auprès de vos futurs  clients ! Dans la plupart des cas, les touristes utilisent  leur téléphone portable pour trouver des restaurants à  proximité de leurs destinations de vacances. C'est  facile de se rendre dans un restaurant où l'on peut  connaître  la structure du menu, les horaires  d'ouverture, les conditions de réservation, et surtout,  comment s'y rendre à l'avance sur le site internet !
 		</p>
+</div>
 		<form action="/add-resto" method="POST">
-		<h2>Incrivez-vous</h2>
+		<h2>Inscrivez-vous</h2>
 
-			    <div class="corps-du-formulaire">
+			    <div class="corps-du-formulaire" >
 			        <div class="Partiegauche">
 			        	<div class="boites">
 			        		<label>Nom du restaurant </label>
@@ -98,27 +100,19 @@
 			        		<i class="fa-solid fa-location-arrow"></i>
 			        		<input name="ville" type="text">
 			        	</div>
-
-
-			        	<div class="boites">
-			        		<label>Numéro de téléphone </label>
-			        		<i class="fa-solid fa-phone"></i>
-			        		<input name="telephone" type="text">
-			        	</div>
 			        			
 			        </div>
 
 			    	<div class="Partiedroite">
-			    		<div class="boites">
-			        		<label>Votre prénom </label>
-			        		<i class="fa-solid fa-user"></i>
-			        		<input type="text">
+
+			        	<div class="boites">
+			        		<label>Numéro de téléphone </label>
+			        		<input name="telephone" type="text">
 			        	</div>
 
 			        	<div class="boites">
-			        		<label>Adresse mail </label>
-			        		<i class="fa-regular fa-at"></i>
-			        		<input type="text">
+			        		<label>Nombre de places </label>
+			        		<input name="nbr_places" type="text">
 			        	</div>
 			        			
 			    	</div>
@@ -126,12 +120,12 @@
 
 
 			     <div class="fin-formualire" align="center">
-			     	<button type="submit">Inscrire mon restaurant</button>
+			     	<button type="submit" href="Restaurant_inscrit">Inscrire mon restaurant</button>
 			     </div>
-    </form>
-	</header>
-
+    
 	
+		</form>
+	</header>
 </body>
 </html>
 

@@ -3,44 +3,69 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            
-           <a class="Logo"aria-current="page" href="index">Art&Goût</a>
+             <img src="img/Logo.svg" alt="Logo" height="50">
+           <a class="Logo"aria-current="page" href="/">Art&Goût</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index">Acceuil</a>
+                        <a class="nav-link" aria-current="page" href="/">Acceuil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="contact">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="reservation">Effectuer une autre reservation</a>
+                        <a class="nav-link" aria-current="page" href="reservations">Effectuer une autre reservation</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-	<header>
+ <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form>
+   <!--   con = Container  for items in the form-->
+   <div class="con">
+    <img src="img/Logo.svg" alt="Logo" style="padding-left:150px ;"height="80";>
+   <!--     Start  header Content  -->
+   <header class="head-form" >
+      <h2>Voici les details de votre reservation 
+          sur Art&Goût</h2>
+     
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set" >
+     
+      <div class="recap" >
+            <p >
+             <strong> Votre nom : </strong> <%= nom %><br>
+             <strong> Votre prénom : </strong><%= prenom %><br>
+             <strong> Votre numéro de téléphone : </strong><%= Telephone %><br>
+             <strong> Votre adresse mail : </strong><%= Mail %><br>
+             <strong> Le nombre de personnes : </strong><%= Nbr_Personnes %><br>
+             <strong> La date de résérvation: </strong><%= Date %><br>
+             <strong> Le nom du restaurant : </strong><%= Restaurant %></p>
+    
+      </div>
 
-		<h1> Voici les details de votre reservation <br> sur Art&Goût</h1>
+   </div>
+  
+   </div>
 
-	<div id="premierTrait"></div>
+  </div>
+    
+  <!-- End Form -->
+  <header>
+        <div class="fin-formualire" align="center">
+        <a type="submit" href="/"> Confirmer ma reservation </a>
+    
+        </div>
+</header
 
-    <p> 
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</form>
+</div>
 
-        </p>
 
-	</header>
-
-	
-	
 </body>
 </html>
-
