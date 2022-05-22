@@ -5,9 +5,11 @@ require('dotenv/config');
  const req = require('express/lib/request');
  const res = require('express/lib/response');
  const Resto = require('./models/Resto');
+ 
 
  const app = express();
  const PORT = 3000;
+
 
 // Middleware
 app.use(express.json());
@@ -24,10 +26,13 @@ app.set('view engine', 'ejs');
 // Import Routes
 const restosRoute = require('./routes/restos');
 const reservationRoutes = require('./routes/reservations');
+const add_resto = require('./routes/ajout_resto');
 //Middlewire
 app.use('/reservations', reservationRoutes);
 app.use('/restos', restosRoute);
+app.use('/add-resto', add_resto);
 // routes
+
 app.get('/' , (req, res) =>{
     res.render('index', {text: 'this is a text'});
 });
@@ -35,7 +40,8 @@ app.get('/contact' , (req, res) =>{
      res.render('contact');
  });
 
-app.get('/reservation' , (req, res) =>{
+app.get('/reservations' , (req, res) =>{
+    
      res.render('reservation');
  });
 
@@ -43,27 +49,6 @@ app.get('/reservation' , (req, res) =>{
      res.render('add-resto')
  })
 
- app.post('/add-resto', async function(req, res, next) {
-     console.log( req.body.telephone)
-     var resto = new Resto({
-                 nom : req.body.nom,
-                 cuisine : req.body.cuisine,
-                 adresse : req.body.adresse,
-                 ville : req.body.ville,
-                 places : 50,
-                 telephone : req.body.telephone
-             });
-
-             try{
-                 var savedResto = await resto.save();
-                 res.render('index');
-             }
-
-             catch (err){
-                 res.json({ message : err });
-                 console.log('Not working');
-             }
- });
 
  // connect to DB
  mongoose.connect(
