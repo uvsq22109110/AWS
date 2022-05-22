@@ -107,12 +107,16 @@ div .d-grid button {
 
 /*Logo*/
 div .Logo{
+
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color: black;
     font-family: Cambria;
     font-style: oblique;
+
 }
+
+
 /* Titre Art&Gout */
 
 
@@ -211,6 +215,8 @@ transform:scale(1.25);
     font-family:  'Dancing Script',cursive;
     font-style: oblique;
 }
+
+
 .elements p{
     font-size: 1.2em;
     display: -webkit-box;

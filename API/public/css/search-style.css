@@ -1,26 +1,132 @@
+html {
+    scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
+}
+
 body{
     height: 100vh;
-    background: url("../img/image1.jpg") no-repeat center center fixed;
     background-size: cover;
-    vertical-align: top; 
 }
 
-.brand-icon{
-    height: 70px;
-    width: 60px;
-    fill: blue;
+ul{
+    margin: 0;
+    padding: 0;
 }
 
-.container-layout{
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+li {
+    list-style: none;
 }
 
-.card-body {
-  font-size: 0.1em;
-  color: black;
-  background-image: none;
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header {
+  background-color: #E4D1B9;
+  background-size: cover;
+}
+
+/*Logo*/
+div .Logo{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: Cambria;
+    font-style: oblique;
+}
+/* Titre Art&Gout */
+
+
+.en-tete h1{
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  Baskerville;
+    font-style: oblique;
+
+}
+
+/* bouton redirection */
+.nav-item {
+
+    display: block;
+    list-style: none;
+    text-align: center;
+    line-height: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-bottom: 6px;
+    font-size: 20px;
+    font-family: times;
+    font-style: inherit;
+    font-variant-caps: all-petite-caps;
+
+}
+
+form{
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+form .card-body {
+
+  
+    border-radius: 10px;
+    background-color: white;
+    background-size: 10px;
+}
+
+form .text {
+
+    font-size: 5em;
+    padding: 20px 0 0 10%;
+    text-shadow: -3px 3px 2px #EEF2FF;
+    animation: titre ease 2s;
+    font-style: oblique;
+    font-family: times;
+}
+
+#premierTrait{
+    height: 1px;
+    width: 30%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    background-color: floralwhite;
+    box-shadow: 1px 3px 2px black;
+}
+
+
+form .btn{
+
+    color: black;
+    background-color: #D4C9AF;
+    background-size: cover;
+    border-radius: 10px;
+    border-color: white;
+    transition: all 0.3s ease;
+}
+
+form .btn:hover { 
+
+    background-color: white;
+    border-color: black;
+    color: black;
+    opacity: 0.4;
+}
+
+
+
 

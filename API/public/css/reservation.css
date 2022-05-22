@@ -1,353 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-a{
-    text-decoration: none;
-    color:rgb(226,226,226);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Nav Style */
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #96674d;
+
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+
 }
-.logo{
-    color: rgb(226,226,226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size:20px;
-    font-weight: 600;
+
+html {
+    scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
 }
-.nav-links{
-    display: flex;
-    justify-content: space-between;
-    width: 13%;
-}
-.nav-links li{
+
+
+.nav-item li {
     list-style: none;
-}
-#active-nav-link{
-    color:wheat;
+
 }
 
-.nav-links a{
-    color: rgb(226,226,226);
-    opacity: 0.8;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-    transition: opacity 0.5s ease-in-out;
-   -webkit-transition: opacity 0.5s ease-in-out;
-   -moz-transition: opacity 0.5s ease-in-out;
+.nav-item a{
+    text-decoration: none;
+    color: black;
 }
-.nav-links a:hover{
-    opacity:1;
-}
-.burger div{
-    width:25px;
-    height:3px;
-    background-color: rgb(226,226,226);
-    margin: 5px;
-}
-.burger{
-    display: none;
-    cursor: pointer;
+/* bouton redirection */
+.nav-item {
+
+    display: block;
+    list-style: none;
+    text-align: right;
+    line-height: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-bottom: 6px;
+    font-size: 20px;
+    font-family: times;
+    font-style: inherit;
+    font-variant-caps: all-petite-caps;
+
 }
 
-@media screen and (max-width: 1170px){
-    .nav-links{
-        width: 60%;
-    }
+/*Logo*/
+div .Logo{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: Cambria;
+    font-style: oblique;
 }
-@media screen and (max-width: 768px){
-    .nav-links{
-        position: absolute;
-        right:0px;
-        height: 100%;
-        top: 8vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: #6c5549;
-        display: none;
-        width:50%;
-        padding-top: 20px;
-        z-index: 5
-    }
-    .nav-links li{
-        padding: 25px;
-    }
-    .burger{
-        display: block;
-    }
-}
-.nav-active{
-    display: flex;
-}
+/* Titre Art&Gout */
 
-/* Slideshow Style */
-.slideshow{
-    position:relative;
-    text-align:center;
-}
-.slideshow img{
-    width:100%;
-    z-index: 0;
-}
-#home-image2, #home-image3{
-    display:none;
-}
-.slideshow a{
-    text-transform: uppercase;
-    font-size: 50px;
-    text-decoration: underline;
-    color: white;
-    font-weight: 800;
-    opacity: 0.8;
-    transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    padding:14px;
-}
-.slideshow a:hover, .mobile-slideshow a:hover{
-    opacity: 1;
-}
-.active-link-text{
-    background-color: #6c5549;
-}
-.image-links-text{
-    z-index:5;
-    position: absolute;
-    top: 25%;
-    left: 68%;
-    transform: translate(-50%, -50%);
-}
-@keyframes imageFade{
-    from{
-        opacity:0.8;
 
-    }
-    to{
-        opacity: 1;
-    }
-}
-.mobile-slideshow{
-    display:none;
-    z-index: -10;
-}
-.mobile-slideshow img{
-    width: 100%;
-}
-.relative-containter{
-    position: relative;
-}
-.mobile-slideshow a{
-    position: absolute;
-    top: 26%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-size: 30px;
-    text-decoration: underline;
-    color: white;
-    font-weight: 800;
-    opacity: 0.8;
-    transition: opacity 0.5s ease-in-out;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;   
-    background-color: #6c5549;
-    cursor: pointer;
-}
-@media screen and (max-width: 768px){
-    .mobile-slideshow{
-        display:block;
-    }
-    .slideshow{
-        display:none;
-    }
-}
-
-/*About Style */
-#about{
-    padding: 60px 35px;
-}
-.about-container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.about-image{
-    display:none;
-}
-.about-text-box{
-    border: solid 2px #b49383;
-    -moz-box-shadow: 0 40px 65px rgba(0,0,0,.24);
-    -webkit-box-shadow: 0 40px 65px rgba(0,0,0,.24);
-    box-shadow: 0 40px 65px rgba(0,0,0,.24);
-    background-color: white;
-    padding: 30px;
-}
-.about-subtitle{
-    color: #b49383;
-    font-family: 'Dancing Script', cursive; 
-    font-size: 30px;
-    margin-bottom: 6px;
-}
-.about-title{
-    margin-bottom: 24px;
-}
-.about-text{
-    font-size: 14px;
-    color: #a5a5a5
-}
-@media screen and (min-width:770px)
-{
-    .about-image{
-        display: block;
-        width: 30%
-    }
-    .about-image img{
-        display:inline-block;
-        width: 350px;
-        height: auto;
-    }
-    .about-text-box{
-        width:65%;
-    }
-    .about-subtitle{
-        font-size: 36px;
-    }
-    .about-text{
-        font-size: 16px;
-    }
-    .about-text-box{
-        padding: 50px;
-        margin-left: 7%;
-    }
-    #about{
-        padding: 5% 10%;
-    }
-}
-@media screen and (min-width:550px){
-    #about{
-        padding: 10% 2%;
-    }
-    .about-text-box{
-        margin-left: 4%;
-    }
-}
-.footer-background{
-    background-color: #96674d;
-    min-height: 32vh;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-}
-.col{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-}
- @media screen and (max-width: 768px){
-    .footer-background{
-        flex-direction: column;
-        align-content: center;
-        z-index: 10;
-    }
-    .col{
-        width:90%;
-        padding:5%;
-        z-index: 10;
-    }
-}
-.restaurant-name{
-    text-transform: uppercase;
-    font-size: 30px;
-}
-.restaurant-name{
-    align-self: center;
-    color: rgb(226,226,226);
-    opacity: 0.8;
+.en-tete h1{
     text-align: center;
+    margin-top: 220px;
+    margin-bottom: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  Baskerville;
+    font-style: oblique;
+
 }
 
-.images{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+header {
+  background-color: #B7CADB;
+  background-size: cover;
 }
-.images img{
-    height:370px;
-    padding: 3px;
-    opacity:0.9;
-    transition: opacity 0.3s ease-in-out;
-    -webkit-transition: opacity 0.3s ease-in-out;
-   -moz-transition: opacity 0.3s ease-in-out;
-}
-.images img:hover{
-    opacity: 1;
-}
-@media screen and (max-width: 1400px){
-    .images img{
-        height:500px;
-    }
-}
+
+
 /* Reservation style */
 .reservation-container{
+    padding-right: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    height: 100vh;
+    background: url("../img/reservation.jpeg") no-repeat center center fixed;
+    background-size: cover;
+
 }
-.reservation-container img{
-    display: inline-block;
-    width: 50%;
-    height: auto;
-}
+
 .reservation-form{
-    display: flex;
+
     flex-direction: column;
     align-items: center;
     width: 700px;
+    background-color: white;
+    margin-left: 40%;
+    background-size: cover;
 }
-@media screen and (max-width: 1430px){
-    .reservation-container{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .reservation-container img{
-        width: 100%;
-    }
-    .reservation-form{
-        width: 100%;
-        margin: 80px 0px;
-    }
-    .reservation-form input{
-        width: 300px;
-        font-size: 18px; 
-        margin: 10px 30px;
-    }
-    .submit-button input{
-        font-size: 16px;
-    }
-    .reservation-form-header{
-        font-size: 36px;
-    }
-}
-@media screen and (max-width: 420px){
-    .reservation-form{
-        width: 50%;
-    }
-}
+
+
 .form-row{
     display: flex;
     flex-wrap: wrap;
@@ -391,14 +140,7 @@ nav{
 .reservation-form-header::before, .reservation-form-header::after{
     content: "~";
 }
-.header-row{
-    text-align: center;
-}
-.messages{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .error{
     color: red;
     text-align: center;
@@ -408,4 +150,3 @@ nav{
     text-align: center;
     display: none;
 }
-

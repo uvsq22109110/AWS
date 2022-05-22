@@ -6,18 +6,91 @@
   box-sizing: border-box;
 }
 
-body,
+
 input,
 textarea {
   font-family: "Poppins", sans-serif;
+
 }
 
+html {
+    scroll-behavior: smooth; /*scroller de facon fluide d'un point a a un point b  */
+}
+
+footer p{
+
+  background-color: #FDF6EC;
+  background-size: cover;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+
+}
+
+
+.nav-item ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item li {
+    list-style: none;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+}
+/* bouton redirection */
+.nav-item {
+
+    display: block;
+    list-style: none;
+    text-align: center;
+    line-height: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-bottom: 6px;
+    font-size: 20px;
+    font-family: times;
+    font-style: inherit;
+    font-variant-caps: all-petite-caps;
+
+}
+
+/*Logo*/
+div .Logo{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-family: Cambria;
+    font-style: oblique;
+}
+/* Titre Art&Gout */
+
+
+.en-tete h1{
+    text-align: center;
+    margin-top: 220px;
+    margin-bottom: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-size: 40px;
+    font-family:  Baskerville;
+    font-style: oblique;
+
+}
+
+header {
+  background-color: #E4D1B9;
+  background-size: cover;
+}
 .container {
   position: relative;
-  width: 100%;
+  width: 200%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #ffffff;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -37,30 +110,53 @@ textarea {
 }
 
 .contact-form {
-  background-color: #0c0c0c;
-  position: relative;
+  background-color: #A2B38B;
+
 }
 
 .circle {
-  border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #f9faf5);
+  border-radius: 100%;
   position: absolute;
 }
 
 .circle.one {
+
+  background-color: #F3E9DD;
+  opacity: 60%;
   width: 130px;
   height: 130px;
   top: 130px;
-  right: -40px;
+  right: 20px;
 }
 
 .circle.two {
+
+  background-color: #F3E9DD;
+  opacity: 60%;
+  width: 80px;
+  height: 80px;
+  bottom: 60px;
+  right: 90px;
+}
+
+.circle.three {
+  background-color: #F3E9DD;
+  opacity: 60%;
   width: 80px;
   height: 80px;
   top: 10px;
-  right: 30px;
+  left: 20px;
 }
 
+.circle.four {
+
+  background-color: #F3E9DD;
+  opacity: 60%;
+  width: 80px;
+  height: 80px;
+  bottom: 30px;
+  left: 30px;
+}
 
 
 form {
@@ -124,19 +220,6 @@ textarea.input {
   transform: translateY(0);
 }
 
-.btn {
-  padding: 0.6rem 1.3rem;
-  background-color: #fff;
-  border: 2px solid #fafafa;
-  font-size: 0.95rem;
-  color: #0b0b0b;
-  line-height: 1;
-  border-radius: 25px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0;
-}
 
 
 .input-container span {
@@ -151,43 +234,6 @@ textarea.input {
   z-index: 500;
 }
 
-.input-container span:before,
-.input-container span:after {
-  content: "";
-  position: absolute;
-  width: 10%;
-  opacity: 0;
-  transition: 0.3s;
-  height: 5px;
-  background-color: #090909;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.input-container span:before {
-  left: 50%;
-}
-.btn:hover {
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-}
-
-.input-container span:after {
-  right: 50%;
-}
-
-.input-container.focus label {
-  top: 0;
-  transform: translateY(-50%);
-  left: 25px;
-  font-size: 0.8rem;
-}
-
-.input-container.focus span:before,
-.input-container.focus span:after {
-  width: 50%;
-  opacity: 1;
-}
 
 .contact-info {
   padding: 2.3rem 2.2rem;
@@ -246,28 +292,6 @@ textarea.input {
 }
 
 
-
-
-.big-circle:after {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  background-color: #fafafa;
-  border-radius: 50%;
-  top: calc(50% - 180px);
-  left: calc(50% - 180px);
-}
-
-.square {
-  position: absolute;
-  height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translate(181%, 11%);
-  opacity: 0.2;
-}
-
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -286,17 +310,6 @@ textarea.input {
     right: 70px;
   }
 
-  .square {
-    transform: translate(140%, 43%);
-    height: 350px;
-  }
-
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%;
-  }
-
   .text {
     margin: 1rem 0 1.5rem 0;
   }
@@ -305,21 +318,6 @@ textarea.input {
     color: black;
 }
 
-  .nav-item {
-
-    display: block;
-    list-style: none;
-    text-align: right;
-    line-height: 10px;
-    font-size: 1.2em;
-    text-decoration: none;
-    padding-bottom: 6px;
-    font-size: 20px;
-    font-family: times;
-    font-style: inherit;
-    font-variant-caps: all-petite-caps;
-
-}
   .social-media {
     padding: 1.5rem 0 0 0;
   }
@@ -368,7 +366,14 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 
-  .btn {
-    padding: 0.45rem 1.2rem;
-  }
+}
+
+
+form .btn button{ 
+
+  margin-top: 5%;
+  border-radius: 25%;
+  border-style: !important;
+  background-color: floralwhite;
+
 }
