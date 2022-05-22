@@ -89,29 +89,37 @@
           <span class="circle three"></span>
           <span class="circle four"></span>
 
-          <form action="index" autocomplete="off">
+          <form action="/contact" method="POST">
             <h3 class="title">Chat</h3>
+          <div class="corps-du-formulaire" >
             <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">nom</label>
-              <span>nom</span>
+              
+              <input type="text" placeholder ="nom" class="input" />
+              
+            </div>
+
+            <div class="input-container">
+              
+              <input type="text" placeholder ="prenom" class="input" />
+              
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
-            </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Numéro de télephone</label>
-              <span>Numéro de télephone</span>
-            </div>
-            <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
+
+              <input type="email" placeholder="email" class="input" />
 
             </div>
+            <div class="input-container">
+
+              <input type="tel" placeholder="telephone" class="input" />
+        
+            </div>
+            <div class="input-container textarea">
+
+              <textarea placeholder="message" class="input"></textarea>
+              
+            
+          </div>
+       </div>
              <div class="btn" align="center">
               <button type="submit">    Envoyer    </button>
            </div>
