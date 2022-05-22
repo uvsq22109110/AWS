@@ -156,7 +156,7 @@ form .corps-du-formulaire .boites{
 form .corps-du-formulaire .Partiegauche .boites input{
 
 	margin-top: 5%;
-	padding: 7px 5px 7px 30px;
+	padding: 7px 5px 7px 5px;
 	border: 1px solid #DAB88B;
 	outline-color: black;
 	border-radius: 10px;
