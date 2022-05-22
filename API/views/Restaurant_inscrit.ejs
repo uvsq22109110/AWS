@@ -18,29 +18,47 @@
         </div>
     </nav>
 
-	<header>
+	<div class="overlay">
+<form>
+   <div class="con">
+    <img src="img/Logo.svg" alt="Logo" style="padding-left:150px ;"height="80";>
 
-		<h1> Voici les details de votre restaurant inscrits <br> sur Art&Goût</h1>
-
-	<div id="premierTrait"></div>
+   <header class="head-form" >
+      <h2> Voici les details de votre inscription 
+          sur Art&Goût</h2>
+     
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set" >
+     
         <div class="recap">
-            <p >Nom du restaurant : <%= nom %>
-            <br>Spécialité : <%= cuisine %>
-            <br>Adresse : <%= adresse %>
-            <br>Ville : <%= ville %>
-            <br>Nombre de places : <%= places %>
-            <br>Numéro de téléphone: <%= telephone %></p>    
+            <p >
+            <strong>Nom du restaurant : </strong><%= nom %>
+            <br><strong> Spécialité : </strong><%= cuisine %>
+            <br><strong> Adresse : </strong><%= adresse %>
+            <br><strong> Ville : </strong><%= ville %>
+            <br><strong> Nombre de places : </strong></strong><%= places %>
+            <br><strong> Numéro de téléphone: </strong><%= telephone %></p>    
       </div>
 
-      <div class="fin-formualire" align="center">
-        <a type="submit" href="/"> Ajouter mon restaurant </a>
+   </div>
+  
+   </div>
+
+  </div>
+    
+  <!-- End Form -->
+  <header>
+        <div class="fin-formualire" align="center">
+        <a type="submit" href="/"> Confirmer mon inscription !  </a>
     
         </div>
+</header
 
-	</header>
+</form>
+</div>
 
-    
 
 </body>
 </html>
-
