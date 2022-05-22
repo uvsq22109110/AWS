@@ -135,6 +135,30 @@ header {
 .submit-button input:hover{
     opacity: 0.9;
 }
+
+form .corps-du-formulaire .Partiedroite{
+    margin-left: 10px;
+
+}
+
+
+form .corps-du-formulaire label{
+
+    font-family: times;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+form .corps-du-formulaire{
+
+    display: flex;
+
+}
+
+form .corps-du-formulaire .form-row{
+
+    flex-direction: column;
+    margin-left: 70px;
+}
 .reservation-form-header{
     color: #b49383;
     font-family: 'Dancing Script', cursive; 
