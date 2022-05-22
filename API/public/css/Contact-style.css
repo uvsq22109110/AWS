@@ -59,6 +59,18 @@ footer p{
 
 }
 
+form .corps-du-formulaire .input-container{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+form .corps-du-formulaire label{
+
+    font-family: times;
+    text-decoration: underline;
+}
 /*Logo*/
 div .Logo{
 
