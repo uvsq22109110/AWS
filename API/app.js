@@ -27,10 +27,12 @@ app.set('view engine', 'ejs');
 const restosRoute = require('./routes/restos');
 const reservationRoutes = require('./routes/reservations');
 const add_resto = require('./routes/ajout_resto');
+const contact = require('./routes/contact');
 //Middlewire
 app.use('/reservations', reservationRoutes);
 app.use('/restos', restosRoute);
 app.use('/add-resto', add_resto);
+app.use('/contact', contact);
 // routes
 
 app.get('/' , (req, res) =>{
