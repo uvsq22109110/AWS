@@ -35,7 +35,8 @@ console.log(req.body);
 
         }
         else
-          console.log("Erreur de creation de new data : " + err);
+            res.status(401).send(
+                "Erreur de saisi : \n Vous avez oublié un champs ou mal le saisir \n Veuillez revenir en arriere pour corriger ! \n ");
 
     });
         
