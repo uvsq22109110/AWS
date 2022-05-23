@@ -69,7 +69,7 @@ router.get('/:page', function(req, res, next) {
 
 router.get('/', (req, res) => {
     
-    res.render('index');   
+    res.render('restos');   
 });
 
 
